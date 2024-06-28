@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Navigation with Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+      * {
+        font-family: "roboto";
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="relative w-full h-[717px]">
+        <img
+          class="w-full h-full object-cover"
+          src="img/navbg.jpeg"
+          alt="Navigation Background"
+        />
+      </div>
+      <div class="flex items-center justify-center">
+        <nav class="fixed top-7 lg:px-10 py-4 bg-white rounded-[20px] z-50">
+          <div
+            class="flex justify-between items-center w-full max-w-[1124px] px-4 lg:px-0"
+          >
+            <div class="w-44 h-14">
+              <img
+                class="w-full h-full"
+                src="img/header.png"
+                alt="Header Image"
+              />
+            </div>
+            <button class="text-[#0B0706] lg:hidden" id="menu-button">
+              <i class="fas fa-bars" style="font-size: 24px"></i>
+            </button>
+            <div class="hidden lg:flex lg:items-center lg:space-x-8">
+              <ul class="flex flex-col lg:flex-row gap-8">
+                <li>
+                  <a class="text-[#0B0706] hover:text-[#525560]" href="#"
+                    >Home</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#0B0706] hover:text-[#525560]" href="#"
+                    >About us</a
+                  >
+                </li>
+                <li class="relative group">
+                  <a
+                    class="text-[#0B0706] hover:text-[#525560] flex items-center"
+                    href="#"
+                  >
+                    Trekking
+                    <i class="fas fa-chevron-down ml-1 text-[12px]"></i>
+                  </a>
+                  <ul
+                    class="absolute hidden group-hover:block w-56 bg-white border-l-[2px] border-l-red-700 shadow-lg mt-2"
+                  >
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] border-b-violet-600 hover:text-[#525560]"
+                        href="#"
+                        >Annapurna Region Trek</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Everest Region Treks</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Langtang Region Treks</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Far Western Region Treks</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Makalu Region Treks</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Mustang Region Treks</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="relative group">
+                  <a
+                    class="text-[#0B0706] hover:text-[#525560] flex items-center"
+                    href="#"
+                  >
+                    Activities
+                    <i class="fas fa-chevron-down ml-1 text-[12px]"></i>
+                  </a>
+                  <ul
+                    class="absolute hidden hover:block group-hover:block w-48 bg-white border-l-[2px] border-l-red-700 shadow-lg mt-2"
+                  >
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href=""
+                        >Trekking & Hiking</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Adventures Tour</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Day Tours</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Wildlife Tours</a
+                      >
+                    </li>
+                    <li>
+                      <a
+                        class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                        href="#"
+                        >Spiritual Journey</a
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <a class="text-[#0B0706] hover:text-[#525560]" href="#"
+                    >Blog</a
+                  >
+                </li>
+                <li>
+                  <a class="text-[#0B0706] hover:text-[#525560]" href="#"
+                    >Contact Us</a
+                  >
+                </li>
+              </ul>
+              <button
+                id="modal-button"
+                class="bg-[#B42126] text-white px-4 py-2 rounded-lg hover:bg-[#A01E23]"
+              >
+                Best Offer
+              </button>
+            </div>
+          </div>
+        </nav>
+      </div>
+      <div
+        class="absolute inset-0 md:left-[22rem] right-0 md:top-56 text-white shadow-lg rounded-lg md:w-[841px] md:h-36 bg-[#00000099]"
+      >
+        <h1 class="pt-3 text-[36px] font-bold flex justify-center">
+          Himalayan Heights: Trekking Nirvana in Nepal
+        </h1>
+
+        <p class="flex justify-center">
+          Wings to Adventure & Authenticity. Explore Nepal's Enigmatic
+          Landscapes, Culture, & the Majestic Himalayas.
+        </p>
+
+        <div class="flex justify-center pt-8">
+          <button
+            id="modal-button"
+            class="bg-[#B42126] text-white px-4 py-2 rounded-lg hover:bg-[#A01E23]"
+          >
+            Best Offer
+          </button>
+        </div>
+
+        <div>
+          <h1 class="font-extrabold text-[120px] opacity-30">TRAVEL TIME</h1>
+        </div>
+
+        <div class="container mx-auto ">
+          <div
+            class="mt-28 -ml-[21px] lg:px-10 py-5 bg-white rounded-[10px] flex gap-20 shadow-lg w-[1151px]"
+          >
+            <div>
+              <p class="text-black pl-2">Trip</p>
+              <h1 class="text-[#B42126]">Search</h1>
+            </div>
+
+            <div class="w-[2px] h-10 bg-[#b42126]"></div>
+
+            <div class="flex">
+              <i
+                class="fa fa-map-marker"
+                style="font-size: 20px; color: #b42126"
+              ></i>
+              <p class="text-black">Where To?</p>
+            </div>
+
+            <div class="flex">
+              <i
+                class="fas fa-calendar"
+                style="font-size: 20px; color: #b42126"
+              ></i>
+              <p class="text-black">When</p>
+            </div>
+
+            <div class="flex">
+              <i
+                class="fa fa-location-arrow"
+                style="font-size: 20px; color: #b42126"
+              ></i>
+              <p class="text-black">Travel Type</p>
+            </div>
+
+            <button
+              id="modal-button"
+              class="bg-[#B42126] text-white px-4 py-2 rounded-lg hover:bg-[#A01E23]"
+            >
+              Search Now
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Modal -->
+    <div
+      id="mobile-menu"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+    >
+      <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg mx-auto">
+        <div class="flex justify-between items-center border-b pb-3">
+          <h2 class="text-xl font-semibold">Menu</h2>
+          <button id="close-menu" class="text-gray-600 hover:text-gray-900">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <ul class="mt-4 flex flex-col gap-4">
+          <li>
+            <a class="text-[#0B0706] hover:text-[#525560]" href="#">Home</a>
+          </li>
+          <li>
+            <a class="text-[#0B0706] hover:text-[#525560]" href="#">About us</a>
+          </li>
+          <li class="relative group">
+            <a
+              class="text-[#0B0706] hover:text-[#525560] flex items-center"
+              href="#"
+            >
+              Trekking
+              <i class="fas fa-chevron-down ml-1 text-[12px]"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block w-56 bg-white shadow-lg rounded-lg mt-2"
+            >
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Annapurna Region Trek</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Everest Region Treks</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Langtang Region Treks</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Far Western Region Treks</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Makalu Region Treks</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Mustang Region Treks</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="relative group">
+            <a
+              class="text-[#0B0706] hover:text-[#525560] flex items-center"
+              href="#"
+            >
+              Activities
+              <i class="fas fa-chevron-down ml-1 text-[12px]"></i>
+            </a>
+            <ul
+              class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-lg mt-2"
+            >
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Trekking & Hiking</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Adventures Tour</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Day Tours</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Wildlife Tours</a
+                >
+              </li>
+              <li>
+                <a
+                  class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
+                  href="#"
+                  >Spiritual Journey</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a class="text-[#0B0706] hover:text-[#525560]" href="#">Blog</a>
+          </li>
+          <li>
+            <a class="text-[#0B0706] hover:text-[#525560]" href="#"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div
+      id="modal"
+      class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden"
+    >
+      <div class="bg-white rounded-lg shadow-lg p-8 max-w-lg mx-auto">
+        <div class="flex justify-between items-center border-b pb-3">
+          <h2 class="text-xl font-semibold">Best Offer</h2>
+          <button id="close-modal" class="text-gray-600 hover:text-gray-900">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <div class="mt-4">
+          <p>Here is the best offer for you!</p>
+        </div>
+        <div class="mt-4 flex justify-end">
+          <button
+            id="close-modal-bottom"
+            class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+          >
+            Close
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <section class="container mx-auto px-36 mt-20">
+      <div class="grid grid-rows-3 grid-flow-col gap-4">
+        <div class="row-span-3 ..."><img src="img/section1.png" alt="" /></div>
+        <div class="col-span-2 font-bold text-[36px]">Our Best Offers</div>
+        <div class="row-span-2 col-span-2">
+          Unlock Your Next Adventure with Our Best Offers Yet! From Tranquil
+          Retreats to Thrilling Expeditions, Dive into a World of Unmatched
+          Experiences. Don't Miss Out on Exclusive Deals Tailored Just for You.
+          <div>
+            <button
+              id="close-modal-bottom"
+              class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      // JavaScript to handle mobile menu toggle
+      document
+        .getElementById("menu-button")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.toggle("hidden");
+        });
+
+      document
+        .getElementById("close-menu")
+        .addEventListener("click", function () {
+          const menu = document.getElementById("mobile-menu");
+          menu.classList.add("hidden");
+        });
+
+      // JavaScript to handle modal toggle
+      const modalButton = document.getElementById("modal-button");
+      const modal = document.getElementById("modal");
+      const closeModal = document.getElementById("close-modal");
+      const closeModalBottom = document.getElementById("close-modal-bottom");
+
+      modalButton.addEventListener("click", function () {
+        modal.classList.remove("hidden");
+      });
+
+      closeModal.addEventListener("click", function () {
+        modal.classList.add("hidden");
+      });
+
+      closeModalBottom.addEventListener("click", function () {
+        modal.classList.add("hidden");
+      });
+
+      // Close modal when clicking outside of it
+      window.addEventListener("click", function (event) {
+        if (event.target === modal) {
+          modal.classList.add("hidden");
+        }
+        if (event.target === document.getElementById("mobile-menu")) {
+          document.getElementById("mobile-menu").classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>
