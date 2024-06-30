@@ -5,13 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Responsive Navigation with Modal</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
@@ -23,20 +17,23 @@
       * {
         font-family: "roboto";
       }
-      .line::after {
-        content: "";
-        color: #b42126;
-        display: block;
-        width: 72px;
+      .line {
+        width: 82.5px;
+        height: 4px;
         margin-left: 8px;
-        margin-top: 10px;
-        border: 2px solid;
-        border-radius: 66px 0px 66px 0px;
+        margin-top: 20px;
+        background-color: #b42126;
+        transform: skewX(-60deg);
       }
       .checked {
         color: orange;
       }
     </style>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.2.0/remixicon.css"
+      referrerpolicy="no-referrer"
+    />
   </head>
   <body>
     <!--  -->
@@ -236,7 +233,7 @@
           </div>
 
           <div class="flex md:border-l border-[#b42126]">
-            <div class="flex ml-2 mt-2.5">
+            <div class="flex ml-2 mt-2.5 gap-2">
               <i
                 class="fa fa-map-marker"
                 style="font-size: 20px; color: #b42126"
@@ -246,17 +243,14 @@
           </div>
 
           <div class="flex md:border-l border-[#b42126]">
-            <div class="flex ml-2 mt-2.5">
-              <i
-                class="fas fa-calendar"
-                style="font-size: 20px; color: #b42126"
-              ></i>
+            <div class="flex ml-2 mt-2.5 gap-2">
+              <i class="ri-calendar-line text-[#b42126]"></i>
               <p class="text-black">When</p>
             </div>
           </div>
 
           <div class="flex md:border-l border-[#b42126]">
-            <div class="flex ml-2 mt-2.5">
+            <div class="flex ml-2 mt-2.5 gap-2">
               <i
                 class="fa fa-location-arrow"
                 style="font-size: 20px; color: #b42126"
@@ -446,70 +440,79 @@
     <!-- component -->
     <main>
       <!-- Our best offer -->
-      <section class="container mx-auto px-2 lg:px-36 mt-20 mb-5">
-        <div class="grid lg:grid-flow-col gap-4 mb-3">
-          <div class="lg:hidden">
-            <p class="font-bold text-[36px]">Our Offers</p>
-            <div class="line"></div>
-          </div>
-          <div class="relative row-span-3 w-full h-[275px] lg:w-[608px]">
-            <img
-              class="w-full h-full object-cover rounded-lg"
-              src="img/section1.png"
-              alt=""
-            />
-            <div class="bg-black absolute inset-0 opacity-20 rounded-lg"></div>
-            <p class="absolute top-0 text-white rounded-tl-lg bg-[#b42126]">
-              $100
-            </p>
-            <div
-              class="bg-black absolute bottom-0 left-0 right-0 opacity-80 rounded-b-lg px-4 py-2 lg:px-8 lg:py-4 text-white"
-            >
-              <div class="flex gap-4 mb-4">
-                <div>
-                  <i class="fa-regular fa-clock" style="color: #ffffff"></i>
-                  4days
+      <section>
+        <div class="container mx-auto px-2 2xl:px-36 mt-20 mb-10">
+          <div class="grid lg:grid-flow-col gap-4 mb-3">
+            <div class="lg:hidden">
+              <p class="font-bold text-[36px]">Our Offers</p>
+              <div class="line"></div>
+            </div>
+            <div class="relative row-span-3 w-full h-[275px] lg:w-[608px]">
+              <img
+                class="w-full h-full object-cover rounded-lg"
+                src="img/section1.png"
+                alt=""
+              />
+              <div
+                class="bg-black absolute inset-0 opacity-20 rounded-lg"
+              ></div>
+              <p class="absolute top-0 text-white rounded-tl-lg bg-[#b42126]">
+                $100
+              </p>
+              <div
+                class="bg-black absolute bottom-0 left-0 right-0 opacity-80 rounded-b-lg px-4 py-2 lg:px-8 lg:py-4 text-white"
+              >
+                <div class="flex gap-4 mb-4">
+                  <div>
+                    <i class="fa-regular fa-clock" style="color: #ffffff"></i>
+                    4days
+                  </div>
+                  <div>
+                    <i
+                      class="fa-solid fa-user-group"
+                      style="color: #fcfcfc"
+                    ></i>
+                    2+
+                  </div>
                 </div>
-                <div>
-                  <i class="fa-solid fa-user-group" style="color: #fcfcfc"></i>
-                  2+
+                <div class="font-bold text-[18px] lg:text-[24px]">
+                  Lumbini Tour
                 </div>
               </div>
-              <div class="font-bold text-[18px] lg:text-[24px]">
-                Lumbini Tour
+            </div>
+
+            <div class="hidden lg:block">
+              <div>
+                <img class="pl-72 opacity-10" src="img/section2.png" alt="" />
+              </div>
+              <div class="absolute top-[50rem] pl-4 pr-8">
+                <div class="col-span-2 font-bold text-[36px]">
+                  Our Best Offers
+                  <div class="line"></div>
+                </div>
+                <div class="row-span-2 col-span-2 mt-9">
+                  <p class="xl:w-[600px]">
+                    Unlock Your Next Adventure with Our Best Offers Yet! From
+                    Tranquil Retreats to Thrilling Expeditions, Dive into a
+                    World of Unmatched Experiences. Don't Miss Out on Exclusive
+                    Deals Tailored Just for You.
+                  </p>
+                  <div class="mt-10 ]">
+                    <button
+                      class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+                    >
+                      Explore All &#x1F862;
+                    </button>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
 
-          <div class="hidden lg:block">
-            <div>
-              <img class="pl-72 opacity-10" src="img/section2.png" alt="" />
-            </div>
-            <div class="absolute top-[50rem] pl-4 pr-8">
-              <div class="col-span-2 font-bold text-[36px]">
-                Our Best Offers
-                <div class="line"></div>
-              </div>
-              <div class="row-span-2 col-span-2 mt-9">
-                Unlock Your Next Adventure with Our Best Offers Yet! From
-                Tranquil Retreats to Thrilling Expeditions, Dive into a World of
-                Unmatched Experiences. Don't Miss Out on Exclusive Deals
-                Tailored Just for You.
-                <div class="mt-10 ]">
-                  <button
-                    class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
-                  >
-                    Explore All &#x1F862;
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-4">
-          <div>
-            <div class="relative row-span-3 w-full h-[275px] lg:w-[400px]">
+          <div
+            class="md:mx-24 xl:mx-0 grid lg:grid-cols-2 xl:grid-cols-3 gap-4 lg:mt-14"
+          >
+            <div class="relative w-full h-[275px] lg:w-[400px]">
               <img
                 class="w-full h-full object-cover rounded-lg"
                 src="img/tiger.png"
@@ -542,75 +545,75 @@
                 </div>
               </div>
             </div>
-          </div>
 
-          <div>
-            <div class="relative row-span-3 w-full h-[275px] lg:w-[400px]">
-              <img
-                class="w-full h-full object-cover rounded-lg"
-                src="img/kayaking.png"
-                alt=""
-              />
-              <div
-                class="bg-black absolute inset-0 opacity-20 rounded-lg"
-              ></div>
-              <p class="absolute top-0 text-white rounded-tl-lg bg-[#b42126]">
-                $150
-              </p>
-              <div
-                class="bg-black absolute bottom-0 left-0 right-0 opacity-70 rounded-b-lg px-4 py-2 lg:px-8 lg:py-4 text-white"
-              >
-                <div class="flex gap-4 mb-4">
-                  <div>
-                    <i class="fa-regular fa-clock" style="color: #ffffff"></i>
-                    6days
+            <div>
+              <div class="relative w-full h-[275px] lg:w-[400px]">
+                <img
+                  class="w-full h-full object-cover rounded-lg"
+                  src="img/kayaking.png"
+                  alt=""
+                />
+                <div
+                  class="bg-black absolute inset-0 opacity-20 rounded-lg"
+                ></div>
+                <p class="absolute top-0 text-white rounded-tl-lg bg-[#b42126]">
+                  $150
+                </p>
+                <div
+                  class="bg-black absolute bottom-0 left-0 right-0 opacity-70 rounded-b-lg px-4 py-2 lg:px-8 lg:py-4 text-white"
+                >
+                  <div class="flex gap-4 mb-4">
+                    <div>
+                      <i class="fa-regular fa-clock" style="color: #ffffff"></i>
+                      6days
+                    </div>
+                    <div>
+                      <i
+                        class="fa-solid fa-user-group"
+                        style="color: #fcfcfc"
+                      ></i>
+                      2+
+                    </div>
                   </div>
-                  <div>
-                    <i
-                      class="fa-solid fa-user-group"
-                      style="color: #fcfcfc"
-                    ></i>
-                    2+
+                  <div class="font-bold text-[18px] lg:text-[24px]">
+                    Seti White River Rafting
                   </div>
-                </div>
-                <div class="font-bold text-[18px] lg:text-[24px]">
-                  Seti White River Rafting
                 </div>
               </div>
             </div>
-          </div>
 
-          <div>
-            <div class="relative row-span-3 w-full h-[275px] lg:w-[400px]">
-              <img
-                class="w-full h-full object-cover rounded-lg"
-                src="img/mountain.png"
-                alt=""
-              />
-              <div
-                class="bg-black absolute inset-0 opacity-20 rounded-lg"
-              ></div>
-              <p class="absolute top-0 text-white rounded-tl-lg bg-[#b42126]">
-                $150
-              </p>
-              <div
-                class="bg-black absolute bottom-0 left-0 right-0 opacity-70 rounded-b-lg px-4 py-2 lg:px-8 lg:py-4 text-white"
-              >
-                <div class="flex gap-4 mb-4">
-                  <div>
-                    <i class="fa-regular fa-clock" style="color: #ffffff"></i>
-                    6days
+            <div>
+              <div class="relative w-full h-[275px] lg:w-[400px]">
+                <img
+                  class="w-full h-full object-cover rounded-lg"
+                  src="img/mountain.png"
+                  alt=""
+                />
+                <div
+                  class="bg-black absolute inset-0 opacity-20 rounded-lg"
+                ></div>
+                <p class="absolute top-0 text-white rounded-tl-lg bg-[#b42126]">
+                  $150
+                </p>
+                <div
+                  class="bg-black absolute bottom-0 left-0 right-0 opacity-70 rounded-b-lg px-4 py-2 lg:px-8 lg:py-4 text-white"
+                >
+                  <div class="flex gap-4 mb-4">
+                    <div>
+                      <i class="fa-regular fa-clock" style="color: #ffffff"></i>
+                      6days
+                    </div>
+                    <div>
+                      <i
+                        class="fa-solid fa-user-group"
+                        style="color: #fcfcfc"
+                      ></i>
+                      2+
+                    </div>
                   </div>
-                  <div>
-                    <i
-                      class="fa-solid fa-user-group"
-                      style="color: #fcfcfc"
-                    ></i>
-                    2+
+                  <div class="font-bold text-[18px] lg:text-[24px]">
+                    Ghorepani Poon Hill Trek
                   </div>
-                </div>
-                <div class="font-bold text-[18px] lg:text-[24px]">
-                  Ghorepani Poon Hill Trek
                 </div>
               </div>
             </div>
@@ -619,311 +622,900 @@
       </section>
 
       <!-- Trekking -->
-      <section class="container mx-auto px-3 lg:px-36 py-5 bg-[#EDEDED]">
-        <div>
-          <div class="flex justify-center items-center">
-            <h1 class="font-bold text-[36px] text-[#434343]">Trekking</h1>
-            <div class="line"></div>
-          </div>
-
-          <div class="flex justify-center items-center mb-5">
-            <p class="text-[#B42126]">
-              Unlock Your Next Adventure Flyeast Nepal Yet!
-            </p>
-          </div>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-4">
-          <div class="shadow bg-white w-[400px] h-[390px] rounded-[20px]">
-            <div class="relative flex justify-center items-center">
-              <img
-                class="rounded-lg mt-4 w-[360px] h-56"
-                src="img/trek1.jpeg"
-                alt=""
-              />
-              <div
-                class="bg-black absolute inset-0 w-[360px] h-56 opacity-20 rounded-lg ml-5 mt-4"
-              ></div>
-
-              <p
-                class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126] ml-5 mt-4"
-              >
-                $300
-              </p>
-              <p class="absolute top-0 right-8 mt-5 flex gap-[3px]">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-              </p>
-            </div>
-            <div class="flex px-5 justify-between items-center">
-              <p class="text-red-600">600+ Booked</p>
-              <div class="flex items-center gap-[1px]">
-                <i class="fa-solid fa-user-group" style="color: gray"> </i>
-                <p class="text-[#434343]">2+</p>
-              </div>
+      <section class="bg-[#EDEDED]">
+        <div class="container mx-auto px-3 lg:px-24 py-5">
+          <div>
+            <div class="flex justify-center items-center">
+              <h1 class="font-bold text-[36px] text-[#434343]">Trekking</h1>
+              <div class="line"></div>
             </div>
 
-            <div class="px-5">
-              <h1 class="font-medium text-[24px] text-[#434343]">
-                Everest Base Camp Trek
-              </h1>
-              <p class="font-normal text-[#6D6C6C]">
-                Experience the Thrill of Himalayan Adventure, Breath-Taking
-                Landscapes, and Cultural...
+            <div class="flex justify-center items-center mb-5">
+              <p class="text-[#B42126]">
+                Unlock Your Next Adventure Flyeast Nepal Yet!
               </p>
             </div>
           </div>
 
-          <div class="shadow bg-white w-[400px] h-[390px] rounded-[20px]">
-            <div class="relative flex justify-center items-center">
-              <img
-                class="rounded-lg mt-4 w-[360px] h-56"
-                src="img/trek2.png"
-                alt=""
-              />
-              <div
-                class="bg-black absolute inset-0 w-[360px] h-56 opacity-20 rounded-lg ml-5 mt-4"
-              ></div>
-              <p
-                class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126] ml-5 mt-4"
-              >
-                $300
-              </p>
-              <p class="absolute top-0 right-8 mt-5 flex gap-[3px]">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-              </p>
-            </div>
-            <div class="flex px-5 justify-between items-center">
-              <p class="text-red-600">600+ Booked</p>
-              <div class="flex items-center gap-[1px]">
-                <i class="fa-solid fa-user-group" style="color: gray"> </i>
-                <p class="text-[#434343]">2+</p>
-              </div>
-            </div>
-
-            <div class="px-5">
-              <h1 class="font-medium text-[24px] text-[#434343]">
-                Annapurna Base Camp Trek
-              </h1>
-              <p class="font-normal text-[#6D6C6C]">
-                Experience the Thrill of Himalayan Adventure, Breath-Taking
-                Landscapes, and Cultural...
-              </p>
-            </div>
-          </div>
-
-          <div class="shadow bg-white w-[400px] h-[390px] rounded-[20px]">
-            <div class="relative flex justify-center items-center">
-              <img
-                class="rounded-lg mt-4 w-[360px] h-56"
-                src="img/trek3.png"
-                alt=""
-              />
-              <div
-                class="bg-black absolute inset-0 w-[360px] h-56 opacity-20 rounded-lg ml-5 mt-4"
-              ></div>
-              <p
-                class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126] ml-5 mt-4"
-              >
-                $300
-              </p>
-              <p class="absolute top-0 right-8 mt-5 flex gap-[3px]">
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-                <span class="fa fa-star checked"></span>
-              </p>
-            </div>
-            <div class="flex px-5 justify-between items-center">
-              <p class="text-red-600">600+ Booked</p>
-              <div class="flex items-center gap-[1px]">
-                <i class="fa-solid fa-user-group" style="color: gray"> </i>
-                <p class="text-[#434343]">2+</p>
-              </div>
-            </div>
-
-            <div class="px-5">
-              <h1 class="font-medium text-[24px] text-[#434343]">
-                Langtang Region Trek
-              </h1>
-              <p class="font-normal text-[#6D6C6C]">
-                Experience the Thrill of Himalayan Adventure, Breath-Taking
-                Landscapes, and Cultural...
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex justify-center items-center mt-5">
-          <button
-            class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+          <div
+            class="grid lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-4 xl:gap-40 2xl:gap-0"
           >
-            Explore All &#x1F862;
-          </button>
+            <div class="shadow bg-white w-[400px] h-[390px] rounded-[20px]">
+              <div class="relative flex justify-center items-center">
+                <img
+                  class="rounded-lg mt-4 w-[360px] h-56"
+                  src="img/trek1.jpeg"
+                  alt=""
+                />
+                <div
+                  class="bg-black absolute inset-0 w-[360px] h-56 opacity-20 rounded-lg ml-5 mt-4"
+                ></div>
+
+                <p
+                  class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126] ml-5 mt-4"
+                >
+                  $300
+                </p>
+                <p class="absolute top-0 right-8 mt-5 flex gap-[3px]">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </p>
+              </div>
+              <div class="flex px-5 justify-between items-center">
+                <p class="text-red-600">600+ Booked</p>
+                <div class="flex items-center gap-[1px]">
+                  <i class="fa-solid fa-user-group" style="color: gray"> </i>
+                  <p class="text-[#434343]">2+</p>
+                </div>
+              </div>
+
+              <div class="px-5">
+                <h1 class="font-medium text-[24px] text-[#434343]">
+                  Everest Base Camp Trek
+                </h1>
+                <p class="font-normal text-[#6D6C6C]">
+                  Experience the Thrill of Himalayan Adventure, Breath-Taking
+                  Landscapes, and Cultural...
+                </p>
+              </div>
+            </div>
+
+            <div class="shadow bg-white w-[400px] h-[390px] rounded-[20px]">
+              <div class="relative flex justify-center items-center">
+                <img
+                  class="rounded-lg mt-4 w-[360px] h-56"
+                  src="img/trek2.png"
+                  alt=""
+                />
+                <div
+                  class="bg-black absolute inset-0 w-[360px] h-56 opacity-20 rounded-lg ml-5 mt-4"
+                ></div>
+                <p
+                  class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126] ml-5 mt-4"
+                >
+                  $300
+                </p>
+                <p class="absolute top-0 right-8 mt-5 flex gap-[3px]">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </p>
+              </div>
+              <div class="flex px-5 justify-between items-center">
+                <p class="text-red-600">600+ Booked</p>
+                <div class="flex items-center gap-[1px]">
+                  <i class="fa-solid fa-user-group" style="color: gray"> </i>
+                  <p class="text-[#434343]">2+</p>
+                </div>
+              </div>
+
+              <div class="px-5">
+                <h1 class="font-medium text-[24px] text-[#434343]">
+                  Annapurna Base Camp Trek
+                </h1>
+                <p class="font-normal text-[#6D6C6C]">
+                  Experience the Thrill of Himalayan Adventure, Breath-Taking
+                  Landscapes, and Cultural...
+                </p>
+              </div>
+            </div>
+
+            <div class="shadow bg-white w-[400px] h-[390px] rounded-[20px]">
+              <div class="relative flex justify-center items-center">
+                <img
+                  class="rounded-lg mt-4 w-[360px] h-56"
+                  src="img/trek3.png"
+                  alt=""
+                />
+                <div
+                  class="bg-black absolute inset-0 w-[360px] h-56 opacity-20 rounded-lg ml-5 mt-4"
+                ></div>
+                <p
+                  class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126] ml-5 mt-4"
+                >
+                  $300
+                </p>
+                <p class="absolute top-0 right-8 mt-5 flex gap-[3px]">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </p>
+              </div>
+              <div class="flex px-5 justify-between items-center">
+                <p class="text-red-600">600+ Booked</p>
+                <div class="flex items-center gap-[1px]">
+                  <i class="fa-solid fa-user-group" style="color: gray"> </i>
+                  <p class="text-[#434343]">2+</p>
+                </div>
+              </div>
+
+              <div class="px-5">
+                <h1 class="font-medium text-[24px] text-[#434343]">
+                  Langtang Region Trek
+                </h1>
+                <p class="font-normal text-[#6D6C6C]">
+                  Experience the Thrill of Himalayan Adventure, Breath-Taking
+                  Landscapes, and Cultural...
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center mt-10">
+            <button
+              class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+            >
+              Explore All &#x1F862;
+            </button>
+          </div>
         </div>
       </section>
 
       <!-- Activites -->
-      <section class="container mx-auto px-3 lg:px-36 py-5">
-        <div>
-          <div class="flex justify-center items-center">
-            <h1 class="font-bold text-[36px]">Activites</h1>
-            <div class="line"></div>
-          </div>
-
-          <div class="flex justify-center items-center mb-5">
-            <p class="text-[#B42126]">
-              Dive into Excitement with Our Latest Activities!
-            </p>
-          </div>
-        </div>
-
-        <div class="grid lg:grid-cols-3 gap-4">
-          <div class="shadow-lg bg-white w-[400px] h-[381px] rounded-[20px]">
-            <div class="px-5 mt-2">
-              <h1 class="font-medium text-[24px] text-[#434343]">
-                Bhote Khosi River Rafting
-              </h1>
-              <p class="font-normal text-[#6D6C6C]">
-                Ride the Rapids of Nepal's Mighty River. Thrilling Adventures
-                Await in the Heart of the Himalayas...
-              </p>
-            </div>
-
-            <div class="relative">
-              <img
-                class="rounded-b-[20px] border-t-[4px] border-[#b42126] mt-[23px] w-full"
-                src="img/acti1.png"
-                alt=""
-              />
-              <div
-                class="bg-black absolute inset-0 opacity-30 rounded-b-[20px] border-t-[4px] border-[#b42126]"
-              ></div>
-
-              <p
-                class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126]"
-              >
-                $100
-              </p>
-            </div>
-          </div>
-
-          <div class="shadow-lg bg-white w-[400px] h-[381px] rounded-[20px]">
-            <div class="relative">
-              <img
-                class="rounded-t-[20px] border-b-[4px] border-[#b42126] w-full"
-                src="img/acti2.png"
-                alt=""
-              />
-              <div
-                class="bg-black absolute inset-0 opacity-30 rounded-t-[20px] border-b-[4px] border-[#b42126]"
-              ></div>
-
-              <p
-                class="absolute top-0 left-0 text-white rounded-tl-lg bg-[#b42126]"
-              >
-                $100
-              </p>
-            </div>
-
-            <div class="px-5 mt-2">
-              <h1 class="font-medium text-[24px] text-[#434343]">
-                Kathmandu-Pokhara Tour
-              </h1>
-              <p class="font-normal text-[#6D6C6C]">
-                Ride the Rapids of Nepal's Mighty River. Thrilling Adventures
-                Await in the Heart of the Himalayas...
-              </p>
-            </div>
-          </div>
-
-          <div class="shadow-lg bg-white w-[400px] h-[381px] rounded-[20px]">
-            <div class="px-5 mt-2">
-              <h1 class="font-medium text-[24px] text-[#434343]">
-                Kali Gandaki River Rafting
-              </h1>
-              <p class="font-normal text-[#6D6C6C]">
-                Ride the Rapids of Nepal's Mighty River. Thrilling Adventures
-                Await in the Heart of the Himalayas...
-              </p>
-            </div>
-
-            <div class="relative">
-              <img
-                class="rounded-b-[20px] border-t-[4px] border-[#b42126] mt-[23px] w-full"
-                src="img/acti3.png"
-                alt=""
-              />
-              <div
-                class="bg-black absolute inset-0 opacity-30 rounded-b-[20px] border-t-[4px] border-[#b42126]"
-              ></div>
-
-              <p
-                class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126]"
-              >
-                $100
-              </p>
-            </div>
-          </div>
-        </div>
-
-        <div class="flex justify-center items-center mt-5">
-          <button
-            class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
-          >
-            Explore All &#x1F862;
-          </button>
-        </div>
-      </section>
-
-      <section class="container mx-auto px-3 lg:px-36 py-5 bg-[#EDEDED]">
-        <div class="grid lg:grid-cols-2 gap-4">
+      <section>
+        <div class="container mx-auto px-3 lg:px-24 xl:px-0 2xl:px-20 py-5">
           <div>
-            <div class="flex items-center">
-              <h1 class="font-bold text-[36px] text-[#434343]">About Us</h1>
+            <div class="flex justify-center items-center">
+              <h1 class="font-bold text-[36px]">Activites</h1>
               <div class="line"></div>
             </div>
 
-            <div>
+            <div class="flex justify-center items-center mb-5">
               <p class="text-[#B42126]">
                 Dive into Excitement with Our Latest Activities!
               </p>
             </div>
+          </div>
 
+          <div
+            class="grid lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-4"
+          >
+            <div class="shadow-lg bg-white w-[400px] h-[381px] rounded-[20px]">
+              <div class="px-5 mt-2">
+                <h1 class="font-medium text-[24px] text-[#434343]">
+                  Bhote Khosi River Rafting
+                </h1>
+                <p class="font-normal text-[#6D6C6C]">
+                  Ride the Rapids of Nepal's Mighty River. Thrilling Adventures
+                  Await in the Heart of the Himalayas...
+                </p>
+              </div>
+
+              <div class="relative">
+                <img
+                  class="rounded-b-[20px] border-t-[4px] border-[#b42126] mt-[23px] w-full"
+                  src="img/acti1.png"
+                  alt=""
+                />
+                <div
+                  class="bg-black absolute inset-0 opacity-30 rounded-b-[20px] border-t-[4px] border-[#b42126]"
+                ></div>
+
+                <p
+                  class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126]"
+                >
+                  $100
+                </p>
+              </div>
+            </div>
+
+            <div class="shadow-lg bg-white w-[400px] h-[381px] rounded-[20px]">
+              <div class="relative">
+                <img
+                  class="rounded-t-[20px] border-b-[4px] border-[#b42126] w-full"
+                  src="img/acti2.png"
+                  alt=""
+                />
+                <div
+                  class="bg-black absolute inset-0 opacity-30 rounded-t-[20px] border-b-[4px] border-[#b42126]"
+                ></div>
+
+                <p
+                  class="absolute top-0 left-0 text-white rounded-tl-lg bg-[#b42126]"
+                >
+                  $100
+                </p>
+              </div>
+
+              <div class="px-5 mt-2">
+                <h1 class="font-medium text-[24px] text-[#434343]">
+                  Kathmandu-Pokhara Tour
+                </h1>
+                <p class="font-normal text-[#6D6C6C]">
+                  Ride the Rapids of Nepal's Mighty River. Thrilling Adventures
+                  Await in the Heart of the Himalayas...
+                </p>
+              </div>
+            </div>
+
+            <div class="shadow-lg bg-white w-[400px] h-[381px] rounded-[20px]">
+              <div class="px-5 mt-2">
+                <h1 class="font-medium text-[24px] text-[#434343]">
+                  Kali Gandaki River Rafting
+                </h1>
+                <p class="font-normal text-[#6D6C6C]">
+                  Ride the Rapids of Nepal's Mighty River. Thrilling Adventures
+                  Await in the Heart of the Himalayas...
+                </p>
+              </div>
+
+              <div class="relative">
+                <img
+                  class="rounded-b-[20px] border-t-[4px] border-[#b42126] mt-[23px] w-full"
+                  src="img/acti3.png"
+                  alt=""
+                />
+                <div
+                  class="bg-black absolute inset-0 opacity-30 rounded-b-[20px] border-t-[4px] border-[#b42126]"
+                ></div>
+
+                <p
+                  class="absolute bottom-0 left-0 text-white rounded-bl-lg bg-[#b42126]"
+                >
+                  $100
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center mt-10">
+            <button
+              class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+            >
+              Explore All &#x1F862;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- About us -->
+      <section class="bg-[#EDEDED]">
+        <div class="container mx-auto px-2 lg:px-10 xl:px-36 lg:py-10">
+          <div class="grid lg:grid-cols-2 gap-4">
             <div>
-              <p>
-                At FlyEast Nepal, we're more than just a travel company; we're
-                your gateway to the wonders of Nepal. With a passion for
-                adventure and a commitment to authenticity, we specialize in
-                crafting unforgettable experiences that immerse you in the
-                breathtaking beauty and rich culture of this Himalayan nation.
-                Our team comprises seasoned professionals who share a deep love
-                for Nepal & a dedication to providing top-notch service. Whether
-                you're seeking adrenaline- fueled treks to Everest Base Camp,
-                serene retreats in the Annapurna region, or cultural
-                explorations in Kathmandu's ancient streets, we're here to make
-                your dreams a reality.
+              <div class="flex items-center">
+                <h1 class="font-bold text-[36px] text-[#434343]">About Us</h1>
+                <div class="line"></div>
+              </div>
+
+              <div>
+                <p class="text-[#B42126]">
+                  Dive into Excitement with Our Latest Activities!
+                </p>
+              </div>
+
+              <div class="space-y-6 mt-6">
+                <p class="text-[#6D6C6C]">
+                  At FlyEast Nepal, we're more than just a travel company; we're
+                  your gateway to the wonders of Nepal. With a passion for
+                  adventure and a commitment to authenticity, we specialize in
+                  crafting unforgettable experiences that immerse you in the
+                  breathtaking beauty and rich culture of this Himalayan nation.
+                </p>
+
+                <p class="text-[#6D6C6C]">
+                  Our team comprises seasoned professionals who share a deep
+                  love for Nepal & a dedication to providing top-notch service.
+                  Whether you're seeking adrenaline- fueled treks to Everest
+                  Base Camp, serene retreats in the Annapurna region, or
+                  cultural explorations in Kathmandu's ancient streets, we're
+                  here to make your dreams a reality.
+                </p>
+              </div>
+
+              <div class="mt-5">
+                <button
+                  class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+                >
+                  Read More &#x1F862;
+                </button>
+              </div>
+            </div>
+
+            <div class="lg:px-24 grid">
+              <div class="lg:relative lg:w-[400px] xl:w-[505px] lg:h-[373px]">
+                <img
+                  class="border-[4px] border-white rounded-[20px]"
+                  src="img/about1.png"
+                  alt=""
+                />
+                <div
+                  class="lg:absolute top-32 -left-28 lg:w-[379px] lg:h-[279px] mt-4"
+                >
+                  <img
+                    class="border-[4px] border-white rounded-[20px]"
+                    src="img/about2.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Our Services -->
+      <section>
+        <div class="container mx-auto px-5 py-4 lg:px-0 2xl:px-20 lg:py-10">
+          <div>
+            <div class="flex justify-center items-center">
+              <h1 class="font-bold text-[36px] text-[#434343]">Our Services</h1>
+              <div class="line"></div>
+            </div>
+
+            <div class="flex justify-center items-center mb-5">
+              <p class="text-[#B42126]">
+                We're committed to providing exceptional services
               </p>
             </div>
           </div>
 
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4">
+            <div class="shadow-lg bg-white lg:w-[295px] h-52 rounded-[20px]">
+              <div class="flex justify-center">
+                <img src="img/os1.png" alt="" />
+              </div>
+
+              <div class="px-3 mt-2">
+                <h1
+                  class="font-medium text-[24px] text-[#434343] flex justify-center"
+                >
+                  Expert Guidance
+                </h1>
+                <p class="font-normal text-[#6D6C6C] text-center mt-1">
+                  Benefit from our team's extensive knowledge and local
+                  expertise every step of the way.
+                </p>
+              </div>
+            </div>
+
+            <div class="shadow-lg bg-white lg:w-[295px] h-52 rounded-[20px]">
+              <div class="flex justify-center">
+                <img src="img/os2.png" alt="" />
+              </div>
+
+              <div class="px-3 mt-2">
+                <h1
+                  class="font-medium text-[24px] text-[#434343] flex justify-center"
+                >
+                  Adventure Activities
+                </h1>
+                <p class="font-normal text-[#6D6C6C] text-center mt-1">
+                  Benefit from our team's extensive knowledge and local
+                  expertise every step of the way.
+                </p>
+              </div>
+            </div>
+
+            <div class="shadow-lg bg-white lg:w-[295px] h-52 rounded-[20px]">
+              <div class="flex justify-center">
+                <img src="img/os3.png" alt="" />
+              </div>
+
+              <div class="px-3 mt-2">
+                <h1
+                  class="font-medium text-[24px] text-[#434343] flex justify-center"
+                >
+                  Transportation Services
+                </h1>
+                <p class="font-normal text-[#6D6C6C] text-center mt-1">
+                  Benefit from our team's extensive knowledge and local
+                  expertise every step of the way.
+                </p>
+              </div>
+            </div>
+
+            <div class="shadow-lg bg-white lg:w-[295px] h-52 rounded-[20px]">
+              <div class="flex justify-center">
+                <img src="img/os4.png" alt="" />
+              </div>
+
+              <div class="px-3 mt-2">
+                <h1
+                  class="font-medium text-[24px] text-[#434343] flex justify-center"
+                >
+                  Cultural Tours
+                </h1>
+                <p class="font-normal text-[#6D6C6C] text-center mt-1">
+                  Benefit from our team's extensive knowledge and local
+                  expertise every step of the way.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center mt-10">
+            <button
+              class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+            >
+              Explore All &#x1F862;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Question  About Trekking? -->
+      <section class="bg-[#EDEDED]">
+        <div class="container mx-auto xl:mx-0 2xl:mx-auto mb-10">
+          <div class="grid xl:grid-cols-2">
+            <div
+              class="relative md:w-[768px] lg:w-[1024px] lg:h-[536px] xl:w-[692px] xl:h-[580px]"
+            >
+              <img
+                class="md:w-full lg:w-full xl:w-full h-[536px] xl:h-full"
+                src="img/QesTrek.png"
+                alt=""
+              />
+              <div class="bg-white absolute inset-0 opacity-20"></div>
+            </div>
+
+            <div class="lg:px-36 md:px-16 xl:px-20 mt-6 2xl:px-0">
+              <div>
+                <h1 class="font-bold lg:text-[36px] text-[29px] text-[#434343]">
+                  Question About Trekking ?
+                </h1>
+              </div>
+
+              <div class="px-2">
+                <form action="">
+                  <div class="flex flex-col">
+                    <label class="mt-6 font-sans" for=""> Full Name</label>
+                    <input
+                      class="mt-2 w-[400px] md:w-[610px] h-14 border-[1px] border-[#6D6E70] rounded-lg outline-none pl-3 lg:pl-5 placeholder:font-sans"
+                      type="text"
+                      name="text"
+                      placeholder="Enter Your Name"
+                    />
+                  </div>
+
+                  <div class="flex flex-wrap xl:flex-nowrap gap-3">
+                    <div class="flex flex-col">
+                      <label class="mt-6 font-sans" for=""> Email</label>
+                      <input
+                        class="mt-2 w-[400px] md:w-[295px] h-14 border-[1px] border-[#6D6E70] rounded-lg outline-none pl-5 placeholder:font-sans"
+                        type="text"
+                        name="text"
+                        placeholder="Enter Your Email"
+                      />
+                    </div>
+
+                    <div class="flex flex-col">
+                      <label class="mt-6 font-sans" for=""> Phone Number</label>
+                      <input
+                        class="mt-2 w-[400px] md:w-[295px] h-14 border-[1px] border-[#6D6E70] rounded-lg outline-none pl-5 placeholder:font-sans"
+                        type="text"
+                        name="text"
+                        placeholder="Enter Your Phone Number"
+                      />
+                    </div>
+                  </div>
+
+                  <div class="flex flex-col">
+                    <label class="mt-6 font-sans" for=""> Query</label>
+                    <input
+                      class="mt-2 md:w-[610px] h-14 border-[1px] border-[#6D6E70] rounded-lg outline-none pl-5 placeholder:font-sans"
+                      type="text"
+                      name="text"
+                      placeholder="Enter Your Query"
+                    />
+                  </div>
+
+                  <div class="flex justify-center lg:block mt-7">
+                    <button
+                      class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+                    >
+                      Submit
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Blog -->
+      <section class="relative my-6">
+        <img
+          class="absolute -z-10 opacity-5 h-[545px] -left-28 top-36"
+          src="img/blog.png"
+          alt=""
+        />
+
+        <div class="container mx-auto">
           <div>
-            <div><img src="img/about1.png" alt="" /></div>
+            <div class="flex justify-center items-center">
+              <h1 class="font-bold text-[36px] text-[#434343]">Blogs</h1>
+              <div class="line"></div>
+            </div>
+
+            <div class="flex justify-center items-center mb-5">
+              <p class="text-[#B42126]">
+                We're committed to providing exceptional services
+              </p>
+            </div>
+          </div>
+
+          <div class="lg:px-24">
+            <div
+              class="grid lg:grid-cols-2 xl:grid-cols-3 place-items-center gap-4 xl:gap-40 2xl:gap-0"
+            >
+              <div class="shadow bg-white w-[400px] h-[441px] rounded-[20px]">
+                <div class="relative flex justify-center items-center">
+                  <img
+                    class="rounded-t-lg w-[400px] h-60 object-cover"
+                    src="img/blog1.png"
+                    alt=""
+                  />
+                  <div
+                    class="bg-black absolute inset-0 w-[400px] h-56 opacity-20 rounded-lg"
+                  ></div>
+                  <p
+                    class="absolute top-0 right-8 mt-5 flex justify-center items-center gap-[3px] text-[#B42126] w-8 h-8 bg-white rounded-full"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </p>
+                </div>
+                <div class="flex px-5 justify-between items-center mt-4">
+                  <div class="flex gap-1">
+                    <img class="w-4 h-4 mt-1" src="img/cal.png" alt="" />
+                    <p class="text-[#7C7C7D] font-sans">Jan 24, 2024</p>
+                  </div>
+                  <div class="flex items-center">
+                    <p class="text-[#B42126]">By Flyeast Nepal</p>
+                  </div>
+                </div>
+
+                <div class="px-5 mt-1">
+                  <h1 class="font-medium text-[24px] text-[#434343]">
+                    Adventures in the Heart of the...
+                  </h1>
+                  <p class="font-normal text-[#6D6C6C]">
+                    Experience the thrill of white-water rafting, paragliding
+                    over valleys, mountain biking through rugged terrain, and
+                    much more...
+                  </p>
+
+                  <div class="flex gap-8 mt-2">
+                    <div class="flex gap-2">
+                      <i class="ri-eye-line text-[#434343]"></i>
+                      <p
+                        class="font-normal text-[15px] text-[#434343] mt-[2px]"
+                      >
+                        4.5k
+                      </p>
+                    </div>
+
+                    <div class="flex gap-2">
+                      <i class="ri-star-fill text-[#FFB800]"></i>
+                      <p
+                        class="font-normal text-[15px] text-[#434343] mt-[2px]"
+                      >
+                        5
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="shadow bg-white w-[400px] h-[441px] rounded-[20px]">
+                <div class="relative flex justify-center items-center">
+                  <img
+                    class="rounded-t-lg w-[400px] h-60 object-cover"
+                    src="img/blog2.png"
+                    alt=""
+                  />
+                  <div
+                    class="bg-black absolute inset-0 w-[400px] h-56 opacity-20 rounded-lg"
+                  ></div>
+                  <p
+                    class="absolute top-0 right-8 mt-5 flex justify-center items-center gap-[3px] text-[#B42126] w-8 h-8 bg-white rounded-full"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </p>
+                </div>
+                <div class="flex px-5 justify-between items-center mt-4">
+                  <div class="flex gap-1">
+                    <img class="w-4 h-4 mt-1" src="img/cal.png" alt="" />
+                    <p class="text-[#7C7C7D] font-sans">Jan 24, 2024</p>
+                  </div>
+                  <div class="flex items-center">
+                    <p class="text-[#B42126]">By Flyeast Nepal</p>
+                  </div>
+                </div>
+
+                <div class="px-5 mt-1">
+                  <h1 class="font-medium text-[24px] text-[#434343]">
+                    Spirit of the Mountains
+                  </h1>
+                  <p class="font-normal text-[#6D6C6C]">
+                    Experience the thrill of white-water rafting, paragliding
+                    over valleys, mountain biking through rugged terrain, and
+                    much more...
+                  </p>
+
+                  <div class="flex gap-8 mt-2">
+                    <div class="flex gap-2">
+                      <i class="ri-eye-line text-[#434343]"></i>
+                      <p
+                        class="font-normal text-[15px] text-[#434343] mt-[2px]"
+                      >
+                        4.5k
+                      </p>
+                    </div>
+
+                    <div class="flex gap-2">
+                      <i class="ri-star-fill text-[#FFB800]"></i>
+                      <p
+                        class="font-normal text-[15px] text-[#434343] mt-[2px]"
+                      >
+                        5
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="shadow bg-white w-[400px] h-[441px] rounded-[20px]">
+                <div class="relative flex justify-center items-center">
+                  <img
+                    class="rounded-t-lg w-[400px] h-60 object-cover"
+                    src="img/blog3.png"
+                    alt=""
+                  />
+                  <div
+                    class="bg-black absolute inset-0 w-[400px] h-56 opacity-20 rounded-lg"
+                  ></div>
+                  <p
+                    class="absolute top-0 right-8 mt-5 flex justify-center items-center gap-[3px] text-[#B42126] w-8 h-8 bg-white rounded-full"
+                  >
+                    <i class="ri-heart-3-line"></i>
+                  </p>
+                </div>
+                <div class="flex px-5 justify-between items-center mt-4">
+                  <div class="flex gap-1">
+                    <img class="w-4 h-4 mt-1" src="img/cal.png" alt="" />
+                    <p class="text-[#7C7C7D] font-sans">Jan 24, 2024</p>
+                  </div>
+                  <div class="flex items-center">
+                    <p class="text-[#B42126]">By Flyeast Nepal</p>
+                  </div>
+                </div>
+
+                <div class="px-5 mt-1">
+                  <h1 class="font-medium text-[24px] text-[#434343]">
+                    Tour in Nepal
+                  </h1>
+                  <p class="font-normal text-[#6D6C6C]">
+                    Experience the thrill of white-water rafting, paragliding
+                    over valleys, mountain biking through rugged terrain, and
+                    much more...
+                  </p>
+
+                  <div class="flex gap-8 mt-2">
+                    <div class="flex gap-2">
+                      <i class="ri-eye-line text-[#434343]"></i>
+                      <p
+                        class="font-normal text-[15px] text-[#434343] mt-[2px]"
+                      >
+                        4.5k
+                      </p>
+                    </div>
+
+                    <div class="flex gap-2">
+                      <i class="ri-star-fill text-[#FFB800]"></i>
+                      <p
+                        class="font-normal text-[15px] text-[#434343] mt-[2px]"
+                      >
+                        5
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center mt-10">
+            <button
+              class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+            >
+              Explore All &#x1F862;
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials -->
+
+      <section class="bg-[#EDEDED]">
+        <div class="container mx-auto px-5 py-4 lg:px-0 2xl:px-20 lg:py-10">
+          <div>
+            <div class="flex justify-center items-center">
+              <h1 class="font-bold text-[36px] text-[#434343]">Our Services</h1>
+              <div class="line"></div>
+            </div>
+
+            <div class="flex justify-center items-center mb-5">
+              <p class="text-[#B42126]">
+                We're committed to providing exceptional services
+              </p>
+            </div>
+          </div>
+
+          <div
+            class="grid md:grid-cols-2 xl:grid-cols-3 mt-20 lg:px-10 md:gap-4"
+          >
+            <div
+              class="relative shadow-lg bg-white lg:w-[400px] h-60 rounded-[20px]"
+            >
+              <div class="flex justify-center">
+                <div class="absolute -top-12 w-24 h-24 rounded-full">
+                  <img
+                    class="rounded-full"
+                    src="img/testimonials1.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="absolute right-8 -top-4">
+                <img src="img/testi.png" alt="" />
+              </div>
+
+              <div class="px-3 mt-16">
+                <p class="flex justify-center gap-[3px]">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </p>
+
+                <h1
+                  class="font-medium text-[24px] text-[#434343] flex justify-center"
+                >
+                  Anisha Mishra
+                </h1>
+                <p class="font-normal text-[#6D6C6C] text-center mt-1">
+                  My experience with FlyEast Nepal was absolutely incredible.
+                  From the moment I contacted them to inquire about trekking
+                  options to the final day of my journey.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative shadow-lg bg-white lg:w-[400px] h-60 rounded-[20px] mt-20 md:mt-0"
+            >
+              <div class="flex justify-center">
+                <div class="absolute -top-12 w-24 h-24 rounded-full">
+                  <img
+                    class="rounded-full"
+                    src="img/testimonials2.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="absolute right-8 -top-4">
+                <img src="img/testi.png" alt="" />
+              </div>
+
+              <div class="px-3 mt-16">
+                <p class="flex justify-center gap-[3px]">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </p>
+
+                <h1
+                  class="font-medium text-[24px] text-[#434343] flex justify-center"
+                >
+                  Puja Duwadi
+                </h1>
+                <p class="font-normal text-[#6D6C6C] text-center mt-1">
+                  My experience with FlyEast Nepal was absolutely incredible.
+                  From the moment I contacted them to inquire about trekking
+                  options to the final day of my journey.
+                </p>
+              </div>
+            </div>
+
+            <div
+              class="relative shadow-lg bg-white lg:w-[400px] h-60 rounded-[20px] mt-20 md:mt-16 xl:mt-0"
+            >
+              <div class="flex justify-center">
+                <div class="absolute -top-12 w-24 h-24 rounded-full">
+                  <img
+                    class="rounded-full"
+                    src="img/testimonials3.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              <div class="absolute right-8 -top-4">
+                <img src="img/testi.png" alt="" />
+              </div>
+
+              <div class="px-3 mt-16">
+                <p class="flex justify-center gap-[3px]">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </p>
+
+                <h1
+                  class="font-medium text-[24px] text-[#434343] flex justify-center"
+                >
+                  Muna Singh Thakuri
+                </h1>
+                <p class="font-normal text-[#6D6C6C] text-center mt-1">
+                  My experience with FlyEast Nepal was absolutely incredible.
+                  From the moment I contacted them to inquire about trekking
+                  options to the final day of my journey.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-center items-center mt-10">
+            <button
+              class="bg-[#b42126] text-white px-4 py-2 rounded-lg hover:bg-gray-600"
+            >
+              Explore All &#x1F862;
+            </button>
           </div>
         </div>
       </section>
     </main>
 
-    <!--  -->
-    <footer></footer>
+    <!-- footer -->
+    <footer class="relative">
+      <img
+        class="absolute w-full h-[530px] opacity-10 object-cover"
+        src="img/footer-bg.png"
+        alt=""
+      />
+      <div class="container mx-auto">
+        <div class="grid grid-cols-2">
+          
+        </div>
+
+      </div>
+    </footer>
 
     <script>
       // JavaScript to handle mobile menu toggle
