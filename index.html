@@ -28,6 +28,10 @@
       .checked {
         color: orange;
       }
+      .follow {
+        background-color: #b42126;
+        color: #ffffff;
+      }
     </style>
     <link
       rel="stylesheet"
@@ -58,7 +62,7 @@
               />
             </div>
             <button class="text-[#0B0706] lg:hidden" id="menu-button">
-              <i class="fas fa-bars" style="font-size: 24px"></i>
+              <i class="ri-menu-line"></i>
             </button>
 
             <div class="hidden lg:flex lg:items-center">
@@ -79,7 +83,7 @@
                     href="#"
                   >
                     Trekking
-                    <i class="fas fa-chevron-down ml-1 text-[12px]"></i>
+                    <i class="ri-arrow-down-s-line"></i>
                   </a>
                   <ul
                     class="absolute hidden group-hover:block w-56 bg-white border-l-[2px] border-l-red-700 shadow-lg mt-2"
@@ -134,7 +138,7 @@
                     href="#"
                   >
                     Activities
-                    <i class="fas fa-chevron-down ml-1 text-[12px]"></i>
+                    <i class="ri-arrow-down-s-line"></i>
                   </a>
                   <ul
                     class="absolute hidden hover:block group-hover:block w-48 bg-white border-l-[2px] border-l-red-700 shadow-lg mt-2"
@@ -220,12 +224,17 @@
           </button>
         </div>
 
-        <div>
-          <h1 class="font-extrabold text-[120px] opacity-30">TRAVEL TIME</h1>
+        <div class="relative">
+          <!-- <h1 class="font-extrabold text-[120px] opacity-30">TRAVEL TIME</h1> -->
+          <img
+            class="absolute -left-36 top-28"
+            src="img/TRAVEL TIME.png"
+            alt=""
+          />
         </div>
 
         <div
-          class="flex bg-white z-10 font-open-sans border text-black rounded-xl px-4 py-5 justify-around mt-28"
+          class="flex bg-white z-10 font-open-sans border text-black rounded-xl px-4 py-5 justify-around mt-72"
         >
           <div>
             <p class="text-black pl-2">Trip</p>
@@ -278,7 +287,7 @@
           <div class="flex justify-between items-center border-b-2 pb-3">
             <h2 class="text-xl font-semibold">Menu</h2>
             <button id="close-menu" class="text-gray-600 hover:text-gray-900">
-              <i class="fas fa-times"></i>
+              <i class="ri-close-large-line"></i>
             </button>
           </div>
           <ul class="mt-4 flex flex-col gap-4">
@@ -296,7 +305,7 @@
                 href="#"
               >
                 Trekking
-                <i class="fas fa-chevron-down ml-1 text-[12px]"></i>
+                <i class="ri-arrow-down-s-line"></i>
               </a>
               <ul
                 class="absolute hidden group-hover:block w-56 bg-white shadow-lg rounded-lg mt-2 z-10"
@@ -351,7 +360,7 @@
                 href="#"
               >
                 Activities
-                <i class="fas fa-chevron-down ml-1 text-[12px]"></i>
+                <i class="ri-arrow-down-s-line"></i>
               </a>
               <ul
                 class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-lg mt-2"
@@ -464,14 +473,11 @@
               >
                 <div class="flex gap-4 mb-4">
                   <div>
-                    <i class="fa-regular fa-clock" style="color: #ffffff"></i>
+                    <i class="ri-time-line"></i>
                     4days
                   </div>
                   <div>
-                    <i
-                      class="fa-solid fa-user-group"
-                      style="color: #fcfcfc"
-                    ></i>
+                    <i class="ri-group-line"></i>
                     2+
                   </div>
                 </div>
@@ -529,14 +535,11 @@
               >
                 <div class="flex gap-4 mb-4">
                   <div>
-                    <i class="fa-regular fa-clock" style="color: #ffffff"></i>
+                    <i class="ri-time-line"></i>
                     6days
                   </div>
                   <div>
-                    <i
-                      class="fa-solid fa-user-group"
-                      style="color: #fcfcfc"
-                    ></i>
+                    <i class="ri-group-line"></i>
                     2+
                   </div>
                 </div>
@@ -563,15 +566,9 @@
                   class="bg-black absolute bottom-0 left-0 right-0 opacity-70 rounded-b-lg px-4 py-2 lg:px-8 lg:py-4 text-white"
                 >
                   <div class="flex gap-4 mb-4">
+                    <div><i class="ri-time-line"></i> 6days</div>
                     <div>
-                      <i class="fa-regular fa-clock" style="color: #ffffff"></i>
-                      6days
-                    </div>
-                    <div>
-                      <i
-                        class="fa-solid fa-user-group"
-                        style="color: #fcfcfc"
-                      ></i>
+                      <i class="ri-group-line"></i>
                       2+
                     </div>
                   </div>
@@ -599,15 +596,9 @@
                   class="bg-black absolute bottom-0 left-0 right-0 opacity-70 rounded-b-lg px-4 py-2 lg:px-8 lg:py-4 text-white"
                 >
                   <div class="flex gap-4 mb-4">
+                    <div><i class="ri-time-line"></i> 6days</div>
                     <div>
-                      <i class="fa-regular fa-clock" style="color: #ffffff"></i>
-                      6days
-                    </div>
-                    <div>
-                      <i
-                        class="fa-solid fa-user-group"
-                        style="color: #fcfcfc"
-                      ></i>
+                      <i class="ri-group-line"></i>
                       2+
                     </div>
                   </div>
@@ -667,7 +658,7 @@
               <div class="flex px-5 justify-between items-center">
                 <p class="text-red-600">600+ Booked</p>
                 <div class="flex items-center gap-[1px]">
-                  <i class="fa-solid fa-user-group" style="color: gray"> </i>
+                  <i class="ri-group-line"></i>
                   <p class="text-[#434343]">2+</p>
                 </div>
               </div>
@@ -709,7 +700,7 @@
               <div class="flex px-5 justify-between items-center">
                 <p class="text-red-600">600+ Booked</p>
                 <div class="flex items-center gap-[1px]">
-                  <i class="fa-solid fa-user-group" style="color: gray"> </i>
+                  <i class="ri-group-line"></i>
                   <p class="text-[#434343]">2+</p>
                 </div>
               </div>
@@ -751,7 +742,7 @@
               <div class="flex px-5 justify-between items-center">
                 <p class="text-red-600">600+ Booked</p>
                 <div class="flex items-center gap-[1px]">
-                  <i class="fa-solid fa-user-group" style="color: gray"> </i>
+                  <i class="ri-group-line"></i>
                   <p class="text-[#434343]">2+</p>
                 </div>
               </div>
@@ -1502,20 +1493,123 @@
       </section>
     </main>
 
-    <!-- footer -->
-    <footer class="relative">
+    <footer class="relative -mb-10 xl:mb-0">
       <img
-        class="absolute w-full h-[530px] opacity-10 object-cover"
+        class="absolute w-full h-full lg:h-[530px] opacity-[5%] object-cover"
         src="img/footer-bg.png"
         alt=""
       />
-      <div class="container mx-auto">
-        <div class="grid grid-cols-2">
-          
+
+      <div class="container mx-auto flex flex-wrap lg:flex-nowrap py-10 px-20">
+        <div>
+          <div class="md:flex lg:block">
+            <img src="img/header.png" alt="" />
+            <p
+              class="text-left w-[336px] text-[#6D6C6C] md:mt-10 md:ml-10 lg:mt-0 lg:ml-0"
+            >
+              we're more than just a travel company; we're your gateway to the
+              wonders of Nepal. With a passion for adventure & commitment to
+              authenticity.
+            </p>
+          </div>
+
+          <div>
+            <h1 class="mt-4 flex justify-center font-medium text-[24px]">
+              Follow Us On:
+            </h1>
+            <div class="flex justify-center gap-3 text-2xl">
+              <i class="text-[#B42126] ri-facebook-circle-fill"
+                ><a href=""></a
+              ></i>
+              <i class="text-[#B42126] ri-instagram-line"><a href=""></a></i>
+              <i class="text-[#B42126] ri-twitter-fill"><a href=""></a></i>
+            </div>
+          </div>
         </div>
 
+        <div class="flex flex-wrap md:flex-nowrap md:px-16">
+          <div class="lg:px-5 mt-7 lg:mt-0">
+            <ul class="space-y-4">
+              <p class="font-medium text-[24px]">Quick Links</p>
+
+              <li><a href="#" class="text-[#525560]"> Home</a></li>
+
+              <li>
+                <a href="./about.html" class="text-[#525560]"> About us</a>
+              </li>
+
+              <li><a href="#" class="text-[#525560]">Trekking</a></li>
+
+              <li><a href="#" class="text-[#525560]">Activites</a></li>
+
+              <li><a href="#" class="text-[#525560]">Blog</a></li>
+
+              <li><a href="#" class="text-[#525560]">Contact Us</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:px-5 mt-7 lg:mt-0">
+            <ul class="space-y-4">
+              <p class="font-medium text-[24px]">Find Your Adventures</p>
+
+              <li><a href="" class="text-[#525560]">Trekking</a></li>
+
+              <li><a href="" class="text-[#525560]">Activites</a></li>
+
+              <li><a href="" class="text-[#525560]">Best Offers</a></li>
+            </ul>
+          </div>
+
+          <div class="lg:px-5 mt-7 lg:mt-0">
+            <ul class="space-y-4">
+              <p class="font-medium text-[24px]">Contant Us</p>
+
+              <li>
+                <a href="" class="text-[#525560]">Phone: 977 1 470 1128</a>
+              </li>
+
+              <li>
+                <a href="" class="text-[#525560]">Address: Kathmandu</a>
+              </li>
+
+              <li>
+                <a href="" class="text-[#525560]"
+                  >Email: flyeastnepal@gmail.com</a
+                >
+              </li>
+
+              <li>
+                <a href="" class="text-[#525560]">Website: flyeast.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="hidden xl:block absolute 2xl:right-0 xl:top-0 xl:right-0">
+        <img src="img/footer-walk.png" alt="" />
+      </div>
+
+      <div>
+        <h1 class="flex justify-center">We Accept :</h1>
+        <div class="flex justify-center gap-5">
+          <img class="w-32" src="img/paypal.png" alt="" />
+          <img class="mt-3 w-16 h-10" src="img/visa.png" alt="" />
+          <img class="w-[88px] h-16" src="img/mastercard.png" alt="" />
+        </div>
       </div>
     </footer>
+
+    <section class="bg-[#B42126]">
+      <div class="container mx-auto h-12 mt-9 flex justify-around items-center">
+        <p class="text-[#FFFFFF] font-sans font-normal text-[16px]">
+          © Copyright 2024 by @paradisegroup
+        </p>
+        <p class="text-[#FFFFFF] font-sans font-normal text-[16px]">
+          Privacy Policy
+        </p>
+      </div>
+    </section>
 
     <script>
       // JavaScript to handle mobile menu toggle
