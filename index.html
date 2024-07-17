@@ -50,13 +50,11 @@
         />
       </div>
       <div class="flex items-center justify-center">
-        <nav
-          class="fixed top-7 w-full max-w-screen-xl lg:px-10 py-4 bg-white rounded-[20px] z-50"
-        >
+        <nav class="fixed top-7 lg:px-10 py-4 bg-white rounded-[20px] z-50">
           <div
-            class="flex justify-between items-center w-full px-4 lg:px-0 gap-6 lg:gap-60"
+            class="flex justify-between items-center w-full lg:w-[1124px] px-4 lg:px-0 gap-60"
           >
-            <div class="w-20 h-12 lg:w-44 lg:h-14">
+            <div class="lg:w-44 lg:h-14 w-20 h-12">
               <img
                 class="w-full h-full"
                 src="img/header.png"
@@ -148,7 +146,7 @@
                     <li>
                       <a
                         class="block px-4 py-2 text-[#0B0706] hover:text-[#525560]"
-                        href="#"
+                        href=""
                         >Trekking & Hiking</a
                       >
                     </li>
@@ -204,12 +202,88 @@
         </nav>
       </div>
 
+      <!-- trip search -->
+      <div
+        class="container mx-auto hidden lg:block absolute inset-0 right-0 md:top-56 text-white shadow-lg rounded-lg md:w-[841px] md:h-36 bg-[#00000099]"
+      >
+        <h1 class="pt-3 text-[36px] font-bold flex justify-center">
+          Himalayan Heights: Trekking Nirvana in Nepal
+        </h1>
+
+        <p class="flex justify-center">
+          Wings to Adventure & Authenticity. Explore Nepal's Enigmatic
+          Landscapes, Culture, & the Majestic Himalayas.
+        </p>
+
+        <div class="flex justify-center pt-8">
+          <button
+            id="modal-button"
+            class="bg-[#B42126] text-white px-4 py-2 rounded-lg hover:bg-[#A01E23]"
+          >
+            Best Offer
+          </button>
+        </div>
+
+        <div class="relative">
+          <!-- <h1 class="font-extrabold text-[120px] opacity-30">TRAVEL TIME</h1> -->
+          <img
+            class="absolute -left-36 top-28"
+            src="img/TRAVEL TIME.png"
+            alt=""
+          />
+        </div>
+
+        <div
+          class="flex bg-white z-10 font-open-sans border text-black rounded-xl px-4 py-5 justify-around mt-72"
+        >
+          <div>
+            <p class="text-black pl-2">Trip</p>
+            <h1 class="text-[#B42126]">Search</h1>
+          </div>
+
+          <div class="flex md:border-l border-[#b42126]">
+            <div class="flex ml-2 mt-2.5 gap-2">
+              <i
+                class="fa fa-map-marker"
+                style="font-size: 20px; color: #b42126"
+              ></i>
+              <p class="text-black">Where To?</p>
+            </div>
+          </div>
+
+          <div class="flex md:border-l border-[#b42126]">
+            <div class="flex ml-2 mt-2.5 gap-2">
+              <i class="ri-calendar-line text-[#b42126]"></i>
+              <p class="text-black">When</p>
+            </div>
+          </div>
+
+          <div class="flex md:border-l border-[#b42126]">
+            <div class="flex ml-2 mt-2.5 gap-2">
+              <i
+                class="fa fa-location-arrow"
+                style="font-size: 20px; color: #b42126"
+              ></i>
+              <p class="text-black">Travel Type</p>
+            </div>
+          </div>
+
+          <div class="md:border-l border-[#b42126]">
+            <button
+              class="bg-[#B42126] text-white px-4 py-2 rounded-lg hover:bg-[#A01E23] ml-5"
+            >
+              Search Now
+            </button>
+          </div>
+        </div>
+      </div>
+
       <!-- Mobile Menu Modal -->
       <div
         id="mobile-menu"
         class="fixed inset-0 flex items-center justify-center bg-black bg-opacity-50 hidden z-50"
       >
-        <div class="bg-white rounded-lg shadow-lg px-6 py-10 max-w-lg mx-auto">
+        <div class="bg-white rounded-lg shadow-lg px-20 py-10 max-w-lg mx-auto">
           <div class="flex justify-between items-center border-b-2 pb-3">
             <h2 class="text-xl font-semibold">Menu</h2>
             <button id="close-menu" class="text-gray-600 hover:text-gray-900">
@@ -366,82 +440,6 @@
               class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600"
             >
               Close
-            </button>
-          </div>
-        </div>
-      </div>
-
-      <!-- trip search -->
-      <div
-        class="container mx-auto hidden lg:block absolute inset-0 right-0 md:top-56 text-white shadow-lg rounded-lg md:w-[841px] md:h-36 bg-[#00000099]"
-      >
-        <h1 class="pt-3 text-[36px] font-bold flex justify-center">
-          Himalayan Heights: Trekking Nirvana in Nepal
-        </h1>
-
-        <p class="flex justify-center">
-          Wings to Adventure & Authenticity. Explore Nepal's Enigmatic
-          Landscapes, Culture, & the Majestic Himalayas.
-        </p>
-
-        <div class="flex justify-center pt-8">
-          <button
-            id="modal-button"
-            class="bg-[#B42126] text-white px-4 py-2 rounded-lg hover:bg-[#A01E23]"
-          >
-            Best Offer
-          </button>
-        </div>
-
-        <div class="relative">
-          <!-- <h1 class="font-extrabold text-[120px] opacity-30">TRAVEL TIME</h1> -->
-          <img
-            class="absolute -left-36 top-28"
-            src="img/TRAVEL TIME.png"
-            alt=""
-          />
-        </div>
-
-        <div
-          class="flex bg-white z-10 font-open-sans border text-black rounded-xl px-4 py-5 justify-around mt-72"
-        >
-          <div>
-            <p class="text-black pl-2">Trip</p>
-            <h1 class="text-[#B42126]">Search</h1>
-          </div>
-
-          <div class="flex md:border-l border-[#b42126]">
-            <div class="flex ml-2 mt-2.5 gap-2">
-              <i
-                class="fa fa-map-marker"
-                style="font-size: 20px; color: #b42126"
-              ></i>
-              <p class="text-black">Where To?</p>
-            </div>
-          </div>
-
-          <div class="flex md:border-l border-[#b42126]">
-            <div class="flex ml-2 mt-2.5 gap-2">
-              <i class="ri-calendar-line text-[#b42126]"></i>
-              <p class="text-black">When</p>
-            </div>
-          </div>
-
-          <div class="flex md:border-l border-[#b42126]">
-            <div class="flex ml-2 mt-2.5 gap-2">
-              <i
-                class="fa fa-location-arrow"
-                style="font-size: 20px; color: #b42126"
-              ></i>
-              <p class="text-black">Travel Type</p>
-            </div>
-          </div>
-
-          <div class="md:border-l border-[#b42126]">
-            <button
-              class="bg-[#B42126] text-white px-4 py-2 rounded-lg hover:bg-[#A01E23] ml-5"
-            >
-              Search Now
             </button>
           </div>
         </div>
@@ -1347,6 +1345,7 @@
       </section>
 
       <!-- Testimonials -->
+
       <section class="bg-[#EDEDED]">
         <div class="container mx-auto px-5 py-4 lg:px-0 2xl:px-20 lg:py-10">
           <div>
